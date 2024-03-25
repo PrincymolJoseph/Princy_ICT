@@ -59,7 +59,7 @@ f= convert(100)
 // (val<10)?Result="pass":Result="fail"
 // console.log(Result)
 
-array1 = ['a','b','c','d','e']
+//array1 = ['a','b','c','d','e']
 //array1.forEach(element => {
 //    console.log(element)
 //});
@@ -70,8 +70,38 @@ array1 = ['a','b','c','d','e']
 //     name:"P",
 //     age:10
 // }
-j=0;
-while (j<array1.length) {
-    console.log(array1[j])
-    j++;
+// j=0;
+// while (j<array1.length) {
+//     console.log(array1[j])
+//     j++;
+// }
+//console.log("Enter the number:")
+//a = window.prompt("Enter the first number:")
+//console.log("First number is: ")
+
+
+// Total of squares
+//----------------------------------
+myArray = [4,2,3,4,5,0,6];
+var totalOfSquares = 0;
+myArray.forEach(element => {
+    totalOfSquares = totalOfSquares + (element * element);
+});
+console.log("Total of squares of the array = ", totalOfSquares);
+
+
+// Whether Prime or not
+//----------------------------------
+var flag = 0;
+for (let index = 2; index <= (myArray[0]/2); index++) {
+    valMode = myArray[0]%index;
+    if(valMode == 0){
+        flag = 1;
+        break;
+    } 
+}
+if(flag == 1){
+    console.log("First number of the array,",myArray[0],", is not prime.");
+}else{
+    console.log("First number of the array,",myArray[0],", is prime.");   
 }
