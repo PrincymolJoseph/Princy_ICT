@@ -54,8 +54,8 @@
 
  #foot{
    font-family:'Times New Roman', Times, serif;
-   background-color: black;
-   color: white;
+   background-color: lightgrey;
+   color: gray;
    text-align: center;
    height: fit-content;
 }

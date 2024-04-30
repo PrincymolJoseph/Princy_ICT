@@ -41,20 +41,21 @@
     </div>
   </nav>
 
-      <form class="g-3 was-validated formStyle">
+      <form class="g-3 was-validated formStyle" action="signedInPage.html" onsubmit="return validate()">
         <h2 class="bg-primary text-white py-2 border border-secondary text-center">Create your own Account</h2>
         <br><br>
+
 
         <div class="row mb-3">
           <div class="col">
             <label for="validationCustom01" class="form-label">First name</label>
-            <input type="text" class="form-control" id="validationCustom01"  required>
+            <input type="text" class="form-control" id="validationName1"  required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Need to enter this field</div>
           </div>
           <div class="col">
             <label for="validationCustom02" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="validationCustom02" >
+            <input type="text" class="form-control" id="validationName2" >
             <div class="valid-feedback">Enter if you wish!</div>
             <div class="invalid-feedback">Need to enter this field</div>
           </div>
@@ -117,13 +118,34 @@
         <div class="row mb-3">
           <div class="col">
             <label for="validationCustom01" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" id="validationCustom01"  required>
+            <input type="text" class="form-control" id="validationPhone"  required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Need to enter this field</div>
           </div>
           <div class="col">
             <label for="validationCustom02" class="form-label">E-mail id</label>
-            <input type="text" class="form-control" id="validationCustom02"  required>
+            <input type="text" class="form-control" id="validationEmail"  required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Need to enter this field</div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <!-- <div class="col">
+            <label for="validationCustom01" class="form-label">Password</label>
+            <input type="password" class="form-control" id="validationPass1"  required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Need to enter this field</div>
+          </div> -->
+          <div class="col">
+            <label for="validationCustom01" class="form-label">Password</label>
+            <input type="password" class="form-control" id="validationPass1"  onchange='checkPasswordLength(this.value)' required>
+            <div class="valid-feedback">Looks good!</div><span id="errorSpan" style="color:red;">****</span>
+            <div class="invalid-feedback">Need to enter this field</div>
+          </div>
+          <div class="col">
+            <label for="validationCustom02" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="validationPass2"  required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Need to enter this field</div>
           </div>
@@ -155,7 +177,9 @@
         </div>
       </form>
       <footer id="foot">
-        <h5><b>Copyright@2024</b></h5>
+        <h3><b>Ananthapuri Library</b></h3>
+        <h5><b><i>Copyright@2024</i></b></h5>
       </footer>
+      <script src="script/signupScript.js"></script>
 </body>
 </html>
