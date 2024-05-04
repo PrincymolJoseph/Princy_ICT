@@ -1,5 +1,6 @@
 var name1 = document.getElementById("validationName1");
 var name2 = document.getElementById("validationName2");
+var PIN = document.getElementById("validationPIN");
 var phone = document.getElementById("validationPhone");
 var email = document.getElementById("validationEmail");
 var pwd1 = document.getElementById("validationPass1");
@@ -12,7 +13,11 @@ var pwd2 = document.getElementById("validationPass2");
 
 // var regxN = /^([\w\s]+)$/
 
-var regxPh = /^(\d{10}|\d{3}\s\d{3}\s\d{4}|\d{3}-\d{3}-\d{4})$/;
+var regxN = /^[a-zA-Z\s]+$/
+
+var regxPIN = /^[\d]+$/
+
+var regxPh = /^(\d{10}|\d{3}\s\d{3}\s\d{4}|\d{3}-\d{3}-\d{4}|\d{3}\.\d{3}\.\d{4})$/;
 
 var regxE = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/
 
@@ -32,6 +37,27 @@ function checkPasswordLength(password) {
   }
 
 function validate(){
+    if(name1.value.trim()==""){
+        alert("FirstName field could not be empty");
+        return false;
+    }
+    else if((regxN.test(name1.value))==false){
+        alert("FirstName field can have only alphabets or space!!!");
+        return false;
+    }
+    else if((regxN.test(name2.value))==false){
+        alert("LastName field can have only alphabets or space!!!");
+        return false;
+    }
+
+    if(PIN.value.trim()==""){
+        alert("PIN field could not be empty");
+        return false;
+    }
+    else if(regxPIN.test(PIN.value)==false){
+        alert("PIN field can have only numbers!!!");
+        return false;
+    }
     
     if(phone.value.trim()==""){
         alert("Phone number field could not be empty");
